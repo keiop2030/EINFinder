@@ -57,7 +57,7 @@ python app.py
 
 2. Open your web browser and navigate to:
 ```
-http://localhost:5000
+http://localhost:3000
 ```
 
 3. Enter the business information in the search form:
