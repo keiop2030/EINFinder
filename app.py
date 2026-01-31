@@ -7,6 +7,7 @@ from flask import Flask, render_template, request, jsonify
 import requests
 from bs4 import BeautifulSoup
 import re
+import os
 from urllib.parse import quote_plus
 
 app = Flask(__name__)
@@ -161,4 +162,7 @@ def about():
     return render_template('about.html')
 
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0', port=5000)
+    # Only enable debug mode in development
+    # In production, set FLASK_ENV to 'production'
+    debug_mode = os.environ.get('FLASK_ENV', 'production') != 'production'
+    app.run(debug=debug_mode, host='0.0.0.0', port=5000)

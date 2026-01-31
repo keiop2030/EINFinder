@@ -48,6 +48,10 @@ pip install -r requirements.txt
 
 1. Start the Flask development server:
 ```bash
+# For development (enables debug mode)
+FLASK_ENV=development python app.py
+
+# For production (debug mode disabled - default)
 python app.py
 ```
 
