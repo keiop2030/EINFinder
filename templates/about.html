@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - EIN Finder</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>🔍 EIN Finder</h1>
+            <p class="tagline">Search public documents for Employer Identification Numbers (EINs)</p>
+            <nav>
+                <a href="/">Home</a>
+                <a href="/about">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="about-section">
+            <h2>About EIN Finder</h2>
+            
+            <div class="about-content">
+                <h3>Purpose</h3>
+                <p>
+                    EIN Finder is a web application designed to help businesses and individuals find 
+                    Employer Identification Numbers (EINs) for businesses they need to file 1099 tax 
+                    forms for. The tool searches publicly available databases to locate EIN information.
+                </p>
+
+                <h3>Data Sources</h3>
+                <p>This application searches the following public databases:</p>
+                <ul>
+                    <li><strong>IRS Tax Exempt Organization Search (TEOS):</strong> Database of non-profit 
+                        organizations with publicly disclosed EINs</li>
+                    <li><strong>SEC EDGAR:</strong> Securities and Exchange Commission database containing 
+                        EINs for publicly traded companies</li>
+                </ul>
+
+                <h3>Use Cases</h3>
+                <ul>
+                    <li>Finding EINs for vendors and contractors when preparing 1099 forms</li>
+                    <li>Verifying business tax identification numbers</li>
+                    <li>Research on publicly available business information</li>
+                </ul>
+
+                <h3>Important Notes</h3>
+                <div class="warning-box">
+                    <p><strong>⚠️ Privacy and Accuracy:</strong></p>
+                    <ul>
+                        <li>This tool only searches publicly available information</li>
+                        <li>Always verify EIN information directly with the business</li>
+                        <li>Not all businesses have publicly available EINs</li>
+                        <li>The most reliable way to obtain an EIN is to request a W-9 form from the business</li>
+                    </ul>
+                </div>
+
+                <h3>EIN Format</h3>
+                <p>
+                    A valid EIN follows the format: <strong>XX-XXXXXXX</strong> (two digits, hyphen, seven digits)
+                </p>
+
+                <h3>Technical Information</h3>
+                <p>
+                    This application is built with Flask and searches multiple public databases. 
+                    The source code is available for review and contribution.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 EIN Finder. This tool searches public databases only. Always verify EIN information with the business directly.</p>
+        </div>
+    </footer>
+</body>
+</html>
